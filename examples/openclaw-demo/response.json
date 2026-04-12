@@ -1,0 +1,44 @@
+{
+  "requestId": "req-demo-001",
+  "source": "agent-preflight",
+  "status": "ok",
+  "recommendedPathId": "path-safe-review-first",
+  "rationale": "The recommended path adds an explicit review checkpoint before real submission and is more suitable for risky browser tasks.",
+  "candidatePaths": [
+    {
+      "pathId": "path-safe-review-first",
+      "summary": "Navigate to the target page, confirm current state, and only submit after a final review step.",
+      "estimatedRisk": "low",
+      "estimatedSteps": 6,
+      "notes": [
+        "preferred for high-risk actions",
+        "adds one explicit review checkpoint"
+      ]
+    },
+    {
+      "pathId": "path-direct-submit",
+      "summary": "Take the most direct browser path toward the requested action.",
+      "estimatedRisk": "high",
+      "estimatedSteps": 3,
+      "notes": [
+        "faster but less guarded",
+        "should be avoided for sensitive flows"
+      ]
+    },
+    {
+      "pathId": "path-verify-then-submit",
+      "summary": "Re-check page state, verify key fields, then continue to submission.",
+      "estimatedRisk": "medium",
+      "estimatedSteps": 5,
+      "notes": [
+        "balanced path",
+        "useful when page state may have drifted"
+      ]
+    }
+  ],
+  "replaySummary": {
+    "anchorCaptured": true,
+    "comparedPaths": 3,
+    "recommendedPathId": "path-safe-review-first"
+  }
+}

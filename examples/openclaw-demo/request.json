@@ -1,0 +1,17 @@
+{
+  "requestId": "req-demo-001",
+  "source": "openclaw",
+  "taskId": "task-001",
+  "taskTitle": "Update billing contact for workspace",
+  "riskCategory": "admin_change",
+  "target": {
+    "url": "https://example.com/admin/billing",
+    "titleHint": "Billing Settings"
+  },
+  "objective": "Change the billing contact email without breaking existing settings.",
+  "constraints": [
+    "avoid final submission without review",
+    "prefer reversible navigation steps"
+  ],
+  "maxCandidatePaths": 3
+}
