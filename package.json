@@ -1,0 +1,13 @@
+{
+  "name": "agent-preflight",
+  "private": false,
+  "version": "0.1.0",
+  "description": "Open-source browser workflow preflight sidecar for high-risk agent actions",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "echo 'Agent Preflight scaffold ready.'",
+    "build": "echo 'Build pipeline not configured yet.'",
+    "test": "echo 'Test pipeline not configured yet.'"
+  }
+}
