@@ -8,6 +8,8 @@
   "scripts": {
     "dev": "echo 'Agent Preflight scaffold ready.'",
     "build": "echo 'Build pipeline not configured yet.'",
-    "test": "echo 'Test pipeline not configured yet.'"
+    "test": "echo 'Test pipeline not configured yet.'",
+    "demo:openclaw": "node adapters/openclaw/demo/run-demo.js",
+    "demo:openclaw:stdout": "node adapters/openclaw/demo/run-demo.js --stdout-only"
   }
 }

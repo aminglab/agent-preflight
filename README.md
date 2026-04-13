@@ -55,6 +55,67 @@ The first release focuses on:
 
 By default, it does not perform final real-world commit on its own.
 
+## OpenClaw demo
+
+A minimal runnable OpenClaw demo is now included.
+
+From the repository root:
+
+```bash
+npm run demo:openclaw
+npm run demo:openclaw:stdout
+```
+
+What it does:
+
+- reads `examples/openclaw-demo/request.json`
+- validates the minimal request shape
+- generates a mock preflight recommendation
+- writes `examples/openclaw-demo/response.generated.json` unless `--stdout-only` is used
+
+You can also run the script directly:
+
+```bash
+node adapters/openclaw/demo/run-demo.js
+node adapters/openclaw/demo/run-demo.js --stdout-only
+```
+
+## Repository structure
+
+```text
+adapters/
+  openclaw/
+    demo/
+    src/
+  hermes/
+    src/
+examples/
+  openclaw-demo/
+  hermes-demo/
+docs/
+```
+
+## Adapter status
+
+### OpenClaw
+
+The OpenClaw adapter currently includes:
+
+- minimal request and response types
+- a mock decision handler
+- sample request and response payloads
+- a runnable demo entrypoint
+
+### Hermes
+
+The Hermes adapter currently includes:
+
+- minimal request and response types
+- a mock decision handler
+- sample request and response payloads
+
+The intent is to keep the public repo runtime-agnostic even while OpenClaw is the first runnable path.
+
 ## Integrations
 
 Planned integrations:
