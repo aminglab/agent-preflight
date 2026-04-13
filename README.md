@@ -5,6 +5,8 @@
 Agent Preflight is an open-source sidecar for OpenClaw, Hermes, and other agent runtimes.
 It helps agents simulate risky browser workflows before real submission, compare candidate paths, and return a safer recommended plan.
 
+**Start here:** [docs/demo-walkthrough.md](docs/demo-walkthrough.md) for the fastest external-developer quickstart.
+
 ## Why this exists
 
 Agent runtimes are getting better at planning and acting.
