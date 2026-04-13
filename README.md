@@ -7,6 +7,8 @@ It helps agents simulate risky browser workflows before real submission, compare
 
 **Start here:** [docs/demo-walkthrough.md](docs/demo-walkthrough.md) for the fastest external-developer quickstart.
 
+**Common questions:** [docs/faq.md](docs/faq.md).
+
 ## Why this exists
 
 Agent runtimes are getting better at planning and acting.
