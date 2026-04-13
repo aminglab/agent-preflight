@@ -9,6 +9,8 @@ It helps agents simulate risky browser workflows before real submission, compare
 
 **Common questions:** [docs/faq.md](docs/faq.md).
 
+**Contributing:** [CONTRIBUTING.md](CONTRIBUTING.md) for the public sidecar contribution boundary.
+
 ## Why this exists
 
 Agent runtimes are getting better at planning and acting.
