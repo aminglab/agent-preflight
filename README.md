@@ -135,12 +135,12 @@ The point of the examples is to show that different risk categories can shift re
 
 ### Coverage snapshot
 
-| Runtime | Scenario | Risk category | Expected status posture |
-| --- | --- | --- | --- |
-| OpenClaw | Default workspace billing update | `admin_change` | `ok`, with review-first recommendation |
-| OpenClaw | Additional team seats purchase | `purchase` | `ok`, but with stronger guardrail notes |
-| Hermes | Default spending limit update | `financial_action` | `needs_review`, strongest guardrail posture |
-| Hermes | Workspace admin contact rotation | `admin_change` | `ok`, if the guarded path remains review-first |
+| Runtime | Scenario | Risk category | Expected status posture | Run |
+| --- | --- | --- | --- | --- |
+| OpenClaw | Default workspace billing update | `admin_change` | `ok`, with review-first recommendation | `npm run demo:openclaw` |
+| OpenClaw | Additional team seats purchase | `purchase` | `ok`, but with stronger guardrail notes | `npm run demo:openclaw:purchase` |
+| Hermes | Default spending limit update | `financial_action` | `needs_review`, strongest guardrail posture | `npm run demo:hermes` |
+| Hermes | Workspace admin contact rotation | `admin_change` | `ok`, if the guarded path remains review-first | `npm run demo:hermes:admin-change` |
 
 This table is meant to show current demo coverage, not a final policy matrix.
 
