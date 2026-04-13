@@ -82,6 +82,14 @@ node adapters/openclaw/demo/run-demo.js
 node adapters/openclaw/demo/run-demo.js --stdout-only
 ```
 
+Additional scenario:
+
+```bash
+npm run demo:openclaw:purchase
+```
+
+This uses `examples/openclaw-demo/request.purchase.json` to simulate a purchase flow and writes `examples/openclaw-demo/response.purchase.generated.json`.
+
 ### Hermes runnable
 
 A matching Hermes demo runner is also included.
@@ -106,6 +114,14 @@ You can also run the script directly:
 node adapters/hermes/demo/run-demo.js
 node adapters/hermes/demo/run-demo.js --stdout-only
 ```
+
+Additional scenario:
+
+```bash
+npm run demo:hermes:admin-change
+```
+
+This uses `examples/hermes-demo/request.admin-change.json` to simulate an admin change flow and writes `examples/hermes-demo/response.admin-change.generated.json`.
 
 ### More runtimes coming
 
@@ -138,6 +154,7 @@ The OpenClaw adapter currently includes:
 - a mock decision handler
 - sample request and response payloads
 - a runnable demo entrypoint
+- a second purchase-oriented example payload
 
 ### Hermes
 
@@ -147,6 +164,7 @@ The Hermes adapter currently includes:
 - a mock decision handler
 - sample request and response payloads
 - a runnable demo entrypoint
+- a second admin-change-oriented example payload
 
 The intent is to keep the public repo runtime-agnostic while still giving developers something concrete to run on day one.
 

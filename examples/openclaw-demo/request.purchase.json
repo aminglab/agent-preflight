@@ -1,0 +1,17 @@
+{
+  "requestId": "req-openclaw-002",
+  "source": "openclaw",
+  "taskId": "task-002",
+  "taskTitle": "Purchase additional team seats",
+  "riskCategory": "purchase",
+  "target": {
+    "url": "https://example.com/billing/seats",
+    "titleHint": "Seat Management"
+  },
+  "objective": "Increase the seat count for the team without taking an unsafe direct checkout path.",
+  "constraints": [
+    "prefer review-first navigation",
+    "avoid irreversible checkout clicks until the end"
+  ],
+  "maxCandidatePaths": 3
+}

@@ -1,0 +1,44 @@
+{
+  "requestId": "req-hermes-002",
+  "source": "agent-preflight",
+  "status": "ok",
+  "recommendedPathId": "path-observe-before-commit",
+  "rationale": "The recommended path observes current browser state before commit and is safer for higher-risk runtime actions.",
+  "candidatePaths": [
+    {
+      "pathId": "path-observe-before-commit",
+      "summary": "Inspect the current page state, confirm key fields, then continue with a guarded commit path.",
+      "estimatedRisk": "low",
+      "estimatedSteps": 6,
+      "notes": [
+        "preferred for sensitive runtime actions",
+        "adds an explicit observation step"
+      ]
+    },
+    {
+      "pathId": "path-fast-commit",
+      "summary": "Take the shortest path toward the requested browser action.",
+      "estimatedRisk": "high",
+      "estimatedSteps": 3,
+      "notes": [
+        "faster but less defensive",
+        "best avoided for risky workflows"
+      ]
+    },
+    {
+      "pathId": "path-verify-then-commit",
+      "summary": "Verify the target state, re-check critical fields, then continue toward commit.",
+      "estimatedRisk": "medium",
+      "estimatedSteps": 5,
+      "notes": [
+        "balanced path",
+        "useful when page state may drift"
+      ]
+    }
+  ],
+  "replaySummary": {
+    "anchorCaptured": true,
+    "comparedPaths": 3,
+    "recommendedPathId": "path-observe-before-commit"
+  }
+}
