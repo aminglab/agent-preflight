@@ -1,15 +1,1 @@
-{
-  "name": "agent-preflight",
-  "private": false,
-  "version": "0.1.0",
-  "description": "Open-source browser workflow preflight sidecar for high-risk agent actions",
-  "license": "MIT",
-  "type": "module",
-  "scripts": {
-    "dev": "echo 'Agent Preflight scaffold ready.'",
-    "build": "echo 'Build pipeline not configured yet.'",
-    "test": "echo 'Test pipeline not configured yet.'",
-    "demo:openclaw": "node adapters/openclaw/demo/run-demo.js",
-    "demo:openclaw:stdout": "node adapters/openclaw/demo/run-demo.js --stdout-only"
-  }
-}
+{"name":"agent-preflight","private":false,"version":"0.1.0","description":"Open-source browser workflow preflight sidecar for high-risk agent actions","license":"MIT","type":"module","scripts":{"dev":"echo 'Agent Preflight scaffold ready.'","build":"echo 'Build pipeline not configured yet.'","test":"echo 'Test pipeline not configured yet.'","demo:openclaw":"node adapters/openclaw/demo/run-demo.js","demo:openclaw:stdout":"node adapters/openclaw/demo/run-demo.js --stdout-only","demo:hermes":"node adapters/hermes/demo/run-demo.js","demo:hermes:stdout":"node adapters/hermes/demo/run-demo.js --stdout-only"}}

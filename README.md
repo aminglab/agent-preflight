@@ -55,9 +55,11 @@ The first release focuses on:
 
 By default, it does not perform final real-world commit on its own.
 
-## OpenClaw demo
+## Demo status
 
-A minimal runnable OpenClaw demo is now included.
+### OpenClaw runnable
+
+A minimal runnable OpenClaw demo is included.
 
 From the repository root:
 
@@ -80,6 +82,36 @@ node adapters/openclaw/demo/run-demo.js
 node adapters/openclaw/demo/run-demo.js --stdout-only
 ```
 
+### Hermes runnable
+
+A matching Hermes demo runner is also included.
+
+From the repository root:
+
+```bash
+npm run demo:hermes
+npm run demo:hermes:stdout
+```
+
+What it does:
+
+- reads `examples/hermes-demo/request.json`
+- validates the minimal request shape
+- generates a mock preflight recommendation
+- writes `examples/hermes-demo/response.generated.json` unless `--stdout-only` is used
+
+You can also run the script directly:
+
+```bash
+node adapters/hermes/demo/run-demo.js
+node adapters/hermes/demo/run-demo.js --stdout-only
+```
+
+### More runtimes coming
+
+The public repository is intentionally runtime-agnostic.
+OpenClaw is the first runnable entrypoint, Hermes is now kept at the same runnable demo layer, and more runtime-facing adapters can be added without turning this repo into the full private control plane.
+
 ## Repository structure
 
 ```text
@@ -88,6 +120,7 @@ adapters/
     demo/
     src/
   hermes/
+    demo/
     src/
 examples/
   openclaw-demo/
@@ -113,8 +146,9 @@ The Hermes adapter currently includes:
 - minimal request and response types
 - a mock decision handler
 - sample request and response payloads
+- a runnable demo entrypoint
 
-The intent is to keep the public repo runtime-agnostic even while OpenClaw is the first runnable path.
+The intent is to keep the public repo runtime-agnostic while still giving developers something concrete to run on day one.
 
 ## Integrations
 
