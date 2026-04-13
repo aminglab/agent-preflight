@@ -43,6 +43,16 @@ It is designed to sit beside:
 
 This repository is the public open-source edge of a broader idea: pre-execution control for high-risk agent actions.
 
+## Minimal flow
+
+```mermaid
+flowchart LR
+    A[Upstream runtime<br/>OpenClaw / Hermes] --> B[Preflight request]
+    B --> C[Candidate path rehearsal]
+    C --> D[Recommended path<br/>and replay summary]
+    D --> E[Upstream runtime decision]
+```
+
 ## First release scope
 
 The first release focuses on:
