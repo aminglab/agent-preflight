@@ -133,6 +133,17 @@ These demos currently use simple mock heuristics rather than a full policy engin
 
 The point of the examples is to show that different risk categories can shift recommendation tone, path ranking, and review posture before any real commit happens.
 
+### Coverage snapshot
+
+| Runtime | Scenario | Risk category | Expected status posture |
+| --- | --- | --- | --- |
+| OpenClaw | Default workspace billing update | `admin_change` | `ok`, with review-first recommendation |
+| OpenClaw | Additional team seats purchase | `purchase` | `ok`, but with stronger guardrail notes |
+| Hermes | Default spending limit update | `financial_action` | `needs_review`, strongest guardrail posture |
+| Hermes | Workspace admin contact rotation | `admin_change` | `ok`, if the guarded path remains review-first |
+
+This table is meant to show current demo coverage, not a final policy matrix.
+
 ### More runtimes coming
 
 The public repository is intentionally runtime-agnostic.
