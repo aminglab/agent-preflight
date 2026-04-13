@@ -1,0 +1,17 @@
+{
+  "requestId": "req-hermes-001",
+  "source": "hermes",
+  "taskId": "task-hermes-001",
+  "taskTitle": "Update workspace spending limit",
+  "riskCategory": "financial_action",
+  "target": {
+    "url": "https://example.com/settings/spending-limit",
+    "titleHint": "Workspace Spending Controls"
+  },
+  "objective": "Adjust the workspace spending limit without applying an unsafe final commit path.",
+  "constraints": [
+    "prefer observable state checks before commit",
+    "require review-friendly path recommendation"
+  ],
+  "maxCandidatePaths": 3
+}
