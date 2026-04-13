@@ -123,6 +123,16 @@ npm run demo:hermes:admin-change
 
 This uses `examples/hermes-demo/request.admin-change.json` to simulate an admin change flow and writes `examples/hermes-demo/response.admin-change.generated.json`.
 
+### Expected behavior by risk category
+
+These demos currently use simple mock heuristics rather than a full policy engine.
+
+- `financial_action` is treated as the strongest guardrail case in the current mock logic and may return `needs_review`.
+- `purchase` also biases toward safer paths and stronger guardrail notes, even when a demo still returns `ok`.
+- `admin_change` is still treated as risky, but can return `ok` when the recommended path stays review-first and guarded.
+
+The point of the examples is to show that different risk categories can shift recommendation tone, path ranking, and review posture before any real commit happens.
+
 ### More runtimes coming
 
 The public repository is intentionally runtime-agnostic.
