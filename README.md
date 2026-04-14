@@ -11,6 +11,8 @@ It helps agents simulate risky browser workflows before real submission, compare
 
 **Contributing:** [CONTRIBUTING.md](CONTRIBUTING.md) for the public sidecar contribution boundary.
 
+**Issues:** use the improvement template for focused demo / adapter / docs changes, and the proposal template for larger direction or repo-boundary discussion.
+
 ## Why this exists
 
 Agent runtimes are getting better at planning and acting.
